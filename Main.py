@@ -55,51 +55,10 @@ async def get_organizations_by_name(name: str):
     return [org for org in organizations_data if name in org['name']]
 
 
-# @app.get('/items')
-# async def items()->List[Post]:
-#     return [Post(**post) for post in posts]
 
 
 
 
 
 
-# class Post(BaseModel):
-#     id:int
-#     title: str
-#     body: str
-#     author: User
-#
-# users = [
-#     {'id':1, "name": 'John', "age": 34},
-#     {'id':2, "name": 'Mike', "age": 40},
-#     {'id':3, "name": 'Jasmin', "age": 24}
-# ]
-#
-# posts = [
-#     {'id':1, 'title': 'News 1', 'body': 'Text 1', 'author': users[1]},
-#     {'id':2, 'title': 'News 2', 'body': 'Text 2','author': users[0]},
-#     {'id':3, 'title': 'News 3', 'body': 'Text 3','author': users[2]}
-# ]
-#
-# @app.get('/items')
-# async def items()->List[Post]:
-#     return [Post(**post) for post in posts]
-#
-# @app.get('/items/{id}')
-# async def items(id:int)->Post:
-#     for post in posts:
-#         if post['id']==id:
-#             return Post(**post)
-#     raise HTTPException(status_code=404, detail = 'Post not found')
-#
-# @app.get('/search')
-# async def search(post_id: Optional[int]=None)-> dict:
-#     if post_id :
-#         for post in posts:
-#             if post['id'] == post_id:
-#                 return post
-#         raise  HTTPException(status_code=404, detail = 'Post not found')
-#
-#     else:
-#         return { 'data': 'No post id provided'}
+
